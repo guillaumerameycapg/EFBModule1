@@ -8,13 +8,16 @@
 import SwiftUI
 
 public struct SwiftUIView: View {
+
+  public init() {}
+  
   public var body: some View {
-        Text("Hello, module 1!")
-    }
+    Text("Hello, module 1!")
+  }
 }
 
 struct SwiftUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        SwiftUIView()
-    }
+  static var previews: some View {
+    SwiftUIView()
+  }
 }
