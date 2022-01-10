@@ -6,6 +6,6 @@ final class EFBModule1Tests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(EFBModule1().text, "Hello, World!")
+        XCTAssertEqual(EFBModule1().title, "Hello, World!")
     }
 }
