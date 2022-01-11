@@ -29,6 +29,8 @@ public struct MapView: View {
           .background(Color.blue)
       }
     }
+    .navigationTitle("Map")
+    .navigationBarTitleDisplayMode(.inline)
   }
 }
 
