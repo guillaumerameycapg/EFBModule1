@@ -19,7 +19,7 @@ public struct MapView: View {
   public var body: some View {
     ZStack {
       Map(coordinateRegion: $mapRegion)
-        .ignoresSafeArea()
+        .edgesIgnoringSafeArea(.bottom)
 
       VStack {
         Spacer()
@@ -29,13 +29,13 @@ public struct MapView: View {
           .background(Color.blue)
       }
     }
-    .navigationTitle("Map")
-    .navigationBarTitleDisplayMode(.inline)
   }
 }
 
 struct MapView_Previews: PreviewProvider {
   static var previews: some View {
-    MapView()
+    NavigationView {
+      MapView()
+    }
   }
 }
