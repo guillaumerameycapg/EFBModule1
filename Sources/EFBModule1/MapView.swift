@@ -52,6 +52,10 @@ public struct MapView: View {
           overlayButton4
           overlayButton5
           overlayButton6
+          overlayButton7
+          overlayButton1
+          overlayButton2
+          overlayButton3
         }
       }
     }
@@ -61,13 +65,14 @@ public struct MapView: View {
     VStack(spacing: 10) {
       Text("GPS G.S.")
         .foregroundColor(Color.white.opacity(0.70))
+        .font(.title2)
       Text("126Kt")
         .foregroundColor(Color.white)
-        .font(.title)
+        .font(.largeTitle)
         .fontWeight(.semibold)
     }
-    .padding(10)
-    .frame(height: 100)
+    .padding(.horizontal, 30)
+    .frame(height: 120)
     .contentShape(Rectangle())
     .background(
       LinearGradient(
@@ -83,13 +88,14 @@ public struct MapView: View {
     VStack(spacing: 10) {
       Text("ACTUAL TRACK")
         .foregroundColor(Color.white.opacity(0.70))
+        .font(.title2)
       Text("109°")
         .foregroundColor(Color.white)
-        .font(.title)
+        .font(.largeTitle)
         .fontWeight(.semibold)
     }
-    .padding(10)
-    .frame(height: 100)
+    .padding(.horizontal, 20)
+    .frame(height: 120)
     .contentShape(Rectangle())
     .background(
       LinearGradient(
@@ -102,31 +108,33 @@ public struct MapView: View {
   }
 
   private var overlayButton3: some View {
-    HStack {
+    HStack(spacing: 10) {
       VStack(spacing: 5) {
         Text("BARO MSL")
           .foregroundColor(Color.white.opacity(0.70))
+          .font(.title2)
         Text("884'")
           .foregroundColor(Color.white)
-          .font(.title2)
+          .font(.largeTitle)
           .fontWeight(.semibold)
         Text("0'")
           .foregroundColor(Color.white)
+          .font(.title2)
           .fontWeight(.semibold)
       }
 
       VStack(spacing: 10) {
         Image(systemName: "minus.square")
-          .font(.title2)
+          .font(.title)
           .foregroundColor(Color.white)
 
         Image(systemName: "plus.square")
-          .font(.title2)
+          .font(.title)
           .foregroundColor(Color.white)
       }
     }
-    .padding(10)
-    .frame(height: 100)
+    .padding(20)
+    .frame(height: 120)
     .contentShape(Rectangle())
     .background(
       LinearGradient(
@@ -139,22 +147,23 @@ public struct MapView: View {
   }
 
   private var overlayButton4: some View {
-    HStack {
+    HStack(spacing: 10) {
       VStack(spacing: 5) {
         Text("GPS MSL")
           .foregroundColor(Color.white.opacity(0.70))
+          .font(.title2)
         Text("10,500'")
           .foregroundColor(Color.white)
-          .font(.title2)
+          .font(.largeTitle)
           .fontWeight(.semibold)
       }
 
       Image(systemName: "plus.square")
-        .font(.title2)
+        .font(.title)
         .foregroundColor(Color.white)
     }
-    .padding(10)
-    .frame(height: 100)
+    .padding(20)
+    .frame(height: 120)
     .contentShape(Rectangle())
     .background(
       LinearGradient(
@@ -170,33 +179,36 @@ public struct MapView: View {
     VStack(spacing: 5) {
       Text("AGL")
         .foregroundColor(Color.white.opacity(0.70))
+        .font(.title2)
 
-      HStack {
+      HStack(spacing: 10) {
         Text("GPS")
           .foregroundColor(Color.white.opacity(0.70))
+          .font(.title2)
 
         Spacer()
 
         Text("10,500'")
           .foregroundColor(Color.white)
-          .font(.title2)
+          .font(.title)
           .fontWeight(.semibold)
       }
 
-      HStack {
+      HStack(spacing: 10) {
         Text("BARO")
           .foregroundColor(Color.white.opacity(0.70))
+          .font(.title2)
 
         Spacer()
 
         Text("884'")
           .foregroundColor(Color.white)
-          .font(.title2)
+          .font(.title)
           .fontWeight(.semibold)
       }
     }
-    .padding(10)
-    .frame(height: 100)
+    .padding(20)
+    .frame(height: 120)
     .contentShape(Rectangle())
     .background(
       LinearGradient(
@@ -212,33 +224,81 @@ public struct MapView: View {
     VStack(spacing: 5) {
       Text("NEXT WPT")
         .foregroundColor(Color.white.opacity(0.70))
+        .font(.title2)
 
-      HStack {
+      HStack(spacing: 10) {
         Text("TIME")
           .foregroundColor(Color.white.opacity(0.70))
+          .font(.title2)
 
         Spacer()
 
         Text("5m")
           .foregroundColor(Color.white)
-          .font(.title2)
+          .font(.title)
           .fontWeight(.semibold)
       }
 
-      HStack {
+      HStack(spacing: 10) {
         Text("DIST")
           .foregroundColor(Color.white.opacity(0.70))
+          .font(.title2)
 
         Spacer()
 
         Text("11NM")
           .foregroundColor(Color.white)
-          .font(.title2)
+          .font(.title)
           .fontWeight(.semibold)
       }
     }
-    .padding(10)
-    .frame(height: 100)
+    .padding(20)
+    .frame(height: 120)
+    .contentShape(Rectangle())
+    .background(
+      LinearGradient(
+        colors: [Color(#colorLiteral(red: 0.370555222, green: 0.3705646992, blue: 0.3705595732, alpha: 1)), Color(#colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1))],
+        startPoint: .top,
+        endPoint: .bottom)
+        .opacity(0.70)
+    )
+    .border(Color.gray, width: 1)
+  }
+
+  private var overlayButton7: some View {
+    VStack(spacing: 5) {
+      Text("DESTINATION")
+        .foregroundColor(Color.white.opacity(0.70))
+        .font(.title2)
+
+      HStack(spacing: 10) {
+        Text("TIME")
+          .foregroundColor(Color.white.opacity(0.70))
+          .font(.title2)
+
+        Spacer()
+
+        Text("5m")
+          .foregroundColor(Color.white)
+          .font(.title)
+          .fontWeight(.semibold)
+      }
+
+      HStack(spacing: 10) {
+        Text("DIST")
+          .foregroundColor(Color.white.opacity(0.70))
+          .font(.title2)
+
+        Spacer()
+
+        Text("11NM")
+          .foregroundColor(Color.white)
+          .font(.title)
+          .fontWeight(.semibold)
+      }
+    }
+    .padding(20)
+    .frame(height: 120)
     .contentShape(Rectangle())
     .background(
       LinearGradient(
@@ -262,5 +322,6 @@ struct MapView_Previews: PreviewProvider {
           }
         }
     }
+.previewInterfaceOrientation(.landscapeRight)
   }
 }
