@@ -37,7 +37,7 @@ public struct MapView: View {
         }
         .padding()
         .font(.title2)
-        .foregroundColor(Color.red)
+        .foregroundColor(Color.label)
         .frame(height: 60)
         .background(Color.systemBackground.opacity(0.70))
 
